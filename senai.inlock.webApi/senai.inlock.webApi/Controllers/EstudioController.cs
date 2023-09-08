@@ -34,6 +34,9 @@ namespace senai.inlock.webApi.Controllers
         {
             _estudioRepository = new EstudioRepository();
         }
+
+
+
         /// <summary>
         ///  Endpoint que aciona o metodo de cadastro de estudio
         /// </summary>
@@ -58,5 +61,28 @@ namespace senai.inlock.webApi.Controllers
                 return BadRequest(erro.Message);
             }
         }
+
+        /// <summary>
+        /// Endpoint que aciona o metodo ListarTodos no repositorio 
+        /// </summary>
+        /// <returns>Retorna a resposta para o usuario(fromt-end)</returns>
+        [HttpGet]
+
+        public IActionResult Get()
+        {
+            try
+            {
+                List<EstudioDomain> ListaEstudios = _estudioRepository.ListarTodos();
+                return Ok(ListaEstudios);
+            }
+            catch (Exception erro)
+            {
+
+                //Retorna um status code BadRequest(400) e a mensagem do erro
+                return BadRequest(erro.Message);
+            }
+            
+        }
+
     }
 }

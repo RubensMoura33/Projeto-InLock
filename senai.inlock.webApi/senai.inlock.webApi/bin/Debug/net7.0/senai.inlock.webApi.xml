@@ -21,6 +21,12 @@
             <param name="novoEstudio">Objeto recebido na requisicao</param>
             <returns></returns>
         </member>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.Get">
+            <summary>
+            Endpoint que aciona o metodo ListarTodos no repositorio 
+            </summary>
+            <returns>Retorna a resposta para o usuario(fromt-end)</returns>
+        </member>
         <member name="T:senai.inlock.webApi.Domains.EstudioDomain">
             <summary>
             Classe que representa a entidade (tabela) Estudio
@@ -129,6 +135,12 @@
             Cadastrar um novo estudio
             </summary>
             <param name="novoEstudio">Objeto com as informacoes que serao cadastradas</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Repositories.EstudioRepository.ListarTodos">
+            <summary>
+            Listar todos objetos (estudios)
+            </summary>
+            <returns>Lista de objeto (estudios)</returns>
         </member>
     </members>
 </doc>

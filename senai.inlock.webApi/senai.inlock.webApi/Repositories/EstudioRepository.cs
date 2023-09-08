@@ -16,8 +16,8 @@ namespace senai.inlock.webApi.Repositories
         /// </summary>
         /// 
 
-        private string StringConexao = "Data Source = NOTE11-S13; Initial Catalog = inlock_games; User Id = sa; Pwd = Senai@134";
-
+        //private string StringConexao = "Data Source = NOTE11-S13; Initial Catalog = inlock_games; User Id = sa; Pwd = Senai@134";
+        private string StringConexao = "Data Source = R4ULM1LGR4U\\SQLEXPRESSS; Initial Catalog = inlock_games; User Id = sa; Pwd = Binho$2022";
         /// <summary>
         /// Cadastrar um novo estudio
         /// </summary>
@@ -72,21 +72,24 @@ namespace senai.inlock.webApi.Repositories
 
                     while(rdr.Read())
                     {
-                    EstudioDomain estudio = new EstudioDomain();
+
+                        EstudioDomain estudio = new EstudioDomain()
+
                         {
                             //Atribui a propriedade IdEstudio o valor recebido no rdr
                             IdEstudio = Convert.ToInt32(rdr[0]),
 
+                            //atribui a propriedade Nome o valr recebeido no rdr
+                            Nome = rdr[1].ToString()
 
+                        };
 
-
-
-
-                        }
+                        listaEstudios.Add(estudio);
                     }
+
                 }
 
-
+                return listaEstudios;
 
             }
         }
