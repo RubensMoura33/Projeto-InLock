@@ -10,6 +10,7 @@ namespace senai.inlock.webApi.Interfaces
     {
         //tipoRetorno  NomeMetodo(tipoParametro nomeParametro)
 
+        UsuarioDomain Login(string email, string senha);
         /// <summary>
         /// Metodo para cadastrar um novo objeto
         /// </summary>
@@ -21,5 +22,8 @@ namespace senai.inlock.webApi.Interfaces
         /// </summary>
         /// <returns>Lista de objeto (Usuario)</returns>
         List<UsuarioDomain> ListarTodos();
+
+
+
     }
 }

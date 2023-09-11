@@ -14,5 +14,10 @@ namespace senai.inlock.webApi.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public UsuarioDomain Login(string email, string senha)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

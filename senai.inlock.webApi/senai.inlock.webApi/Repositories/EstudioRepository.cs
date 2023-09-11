@@ -16,8 +16,8 @@ namespace senai.inlock.webApi.Repositories
         /// </summary>
         /// 
 
-        //private string StringConexao = "Data Source = NOTE11-S13; Initial Catalog = inlock_games; User Id = sa; Pwd = Senai@134";
-        private string StringConexao = "Data Source = R4ULM1LGR4U\\SQLEXPRESSS; Initial Catalog = inlock_games; User Id = sa; Pwd = Binho$2022";
+        private string StringConexao = "Data Source = NOTE11-S13; Initial Catalog = inlock_games; User Id = sa; Pwd = Senai@134";
+        //private string StringConexao = "Data Source = R4ULM1LGR4U\\SQLEXPRESSS; Initial Catalog = inlock_games; User Id = sa; Pwd = Binho$2022";
         /// <summary>
         /// Cadastrar um novo estudio
         /// </summary>
